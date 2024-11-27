@@ -4,7 +4,7 @@
     <ProjectVersion>2.1</ProjectVersion>
     <DockerTargetOS>Linux</DockerTargetOS>
     <DockerPublishLocally>False</DockerPublishLocally>
-    <ProjectGuid>7f4218f0-03f0-421c-9bbb-810da7ada8c5</ProjectGuid>
+    <ProjectGuid>9ea59fd0-34d9-4824-bbe1-46cc85b30a0e</ProjectGuid>
     <DockerLaunchAction>LaunchBrowser</DockerLaunchAction>
     <DockerServiceUrl>{Scheme}://localhost:{ServicePort}/swagger</DockerServiceUrl>
     <DockerServiceName>evently.api</DockerServiceName>

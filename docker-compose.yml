@@ -6,7 +6,7 @@ services:
     container_name: Evently.Api
     build:
       context: .
-      dockerfile: Evently.Api/Dockerfile
+      dockerfile: src/API/Evently.Api/Dockerfile
     ports:
       - 5000:8080
       - 5001:8081
@@ -22,3 +22,12 @@ services:
       - ./.containers/db:/var/lib/postgresql/data
     ports:
       - 5432:5432
+
+  evently.seq:
+    image: datalust/seq:latest
+    container_name: Evently.Seq
+    environment:
+        - ACCEPT_EULA=Y
+    ports:
+        - 5341:5341
+        - 8081:80
