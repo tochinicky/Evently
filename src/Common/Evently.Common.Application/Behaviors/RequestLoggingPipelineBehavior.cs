@@ -1,14 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Evently.Common.Domain;
+﻿using Evently.Common.Domain;
 using MediatR;
 using Microsoft.Extensions.Logging;
 using Serilog.Context;
 
 namespace Evently.Common.Application.Behaviors;
+
 internal sealed class RequestLoggingPipelineBehavior<TRequest, TResponse>(
     ILogger<RequestLoggingPipelineBehavior<TRequest, TResponse>> logger)
     : IPipelineBehavior<TRequest, TResponse>

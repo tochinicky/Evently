@@ -1,11 +1,7 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Microsoft.Extensions.Caching.Distributed;
+﻿using Microsoft.Extensions.Caching.Distributed;
 
 namespace Evently.Common.Infrastructure.Caching;
+
 public static class CacheOptions
 {
     public static DistributedCacheEntryOptions DefaultExpiration => new()

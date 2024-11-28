@@ -1,13 +1,9 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-using Evently.Common.Application.Exceptions;
+﻿using Evently.Common.Application.Exceptions;
 using MediatR;
 using Microsoft.Extensions.Logging;
 
 namespace Evently.Common.Application.Behaviors;
+
 internal sealed class ExceptionHandlingPipelineBehavior<TRequest, TResponse>(
     ILogger<ExceptionHandlingPipelineBehavior<TRequest, TResponse>> logger)
     : IPipelineBehavior<TRequest, TResponse>

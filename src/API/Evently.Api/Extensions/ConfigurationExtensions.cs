@@ -1,6 +1,6 @@
 ﻿namespace Evently.Api.Extensions;
 
-public static class ConfigurationExtensions
+internal static class ConfigurationExtensions
 {
     internal static void AddModuleConfiguration(this IConfigurationBuilder configurationBuilder, string[] modules)
     {
