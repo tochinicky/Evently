@@ -1,4 +1,4 @@
-version: '3.9'
+version: "3.9"
 
 services:
   evently.api:
@@ -8,8 +8,8 @@ services:
       context: .
       dockerfile: src/API/Evently.Api/Dockerfile
     ports:
-      - 5000:8080
-      - 5001:8081
+      - 4000:8080
+      - 4001:8081
 
   evently.database:
     image: postgres:latest
@@ -27,14 +27,14 @@ services:
     image: datalust/seq:latest
     container_name: Evently.Seq
     environment:
-        - ACCEPT_EULA=Y
+      - ACCEPT_EULA=Y
     ports:
-        - 5341:5341
-        - 8081:80
- 
+      - 5341:5341
+      - 8081:80
+
   evently.redis:
     image: redis:latest
     container_name: Evently.Redis
     restart: always
     ports:
-        - 6379:6379
+      - 6379:6379
