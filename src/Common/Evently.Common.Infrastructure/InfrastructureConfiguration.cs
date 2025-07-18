@@ -25,6 +25,7 @@ public static class InfrastructureConfiguration
         string redisConnectionString)
     {
         services.AddAuthenticationInternal();
+
         services.AddAuthorizationInternal();
 
         NpgsqlDataSource npgsqlDataSource = new NpgsqlDataSourceBuilder(databaseConnectionString).Build();
