@@ -1,10 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+﻿namespace Evently.Modules.Users.Domain.Users;
 
-namespace Evently.Modules.Users.Domain.Users;
 public sealed class Permission
 {
     public static readonly Permission GetUser = new("users:read");
@@ -24,9 +19,11 @@ public sealed class Permission
     public static readonly Permission GetTickets = new("tickets:read");
     public static readonly Permission CheckInTicket = new("tickets:check-in");
     public static readonly Permission GetEventStatistics = new("event-statistics:read");
-    public string Code { get; }
-    private Permission(string code)
+
+    public Permission(string code)
     {
-        Code = code ?? throw new ArgumentNullException(nameof(code));
+        Code = code;
     }
+
+    public string Code { get; }
 }
