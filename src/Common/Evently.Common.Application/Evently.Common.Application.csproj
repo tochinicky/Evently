@@ -10,4 +10,8 @@
   <ItemGroup>
     <ProjectReference Include="..\Evently.Common.Domain\Evently.Common.Domain.csproj" />
   </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Authorization\" />
+  </ItemGroup>
 </Project>

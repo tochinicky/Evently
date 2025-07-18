@@ -8,8 +8,11 @@ services:
       context: .
       dockerfile: src/API/Evently.Api/Dockerfile
     ports:
-      - 4000:8080
-      - 4001:8081
+      - 5000:8080
+      - 5001:8081
+    depends_on:
+        evently.database:
+            condition: service_healthy
 
   evently.database:
     image: postgres:latest
@@ -22,6 +25,12 @@ services:
       - ./.containers/db:/var/lib/postgresql/data
     ports:
       - 5432:5432
+    healthcheck:
+        test: ["CMD", "pg_isready", "-U", "postgres"]
+        interval: 5s
+        timeout: 3s
+        retries: 5
+
   evently.identity:
     image: quay.io/keycloak/keycloak:latest
     container_name: Evently.Identity
